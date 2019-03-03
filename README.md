@@ -6,12 +6,12 @@
 ```
 git clone https://github.com/aoaotheone/MarkDown.git
 ```
-安装依赖环境
+安装依赖环境(如果需要进行代码开发)
 
 ```
 npm install
 ```
-运行`webpack`打包前端代码
+运行`webpack`打包前端代码（如果对源码进行了改动）
 
 ```
 npm run build
