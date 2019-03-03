@@ -1,7 +1,7 @@
 const marked = require('marked')
 const highlight = require('highlight.js')
 
-module.exports = { _marked, markdown }
+module.exports = { _marked, marked }
 function _marked () {
   marked.setOptions({
     renderer: new marked.Renderer(),
@@ -25,7 +25,7 @@ function markdown (e) {
   let article = document.getElementById('article')
   let mark = document.getElementById('mark')
   let name = mark.getAttribute('name')
-  if (name === 'readme' && typeof e !== 'undefined') {
+  if (name === 'readme') {
     alert('该文件不可编辑')
     mark.innerHTML = localStorage.getItem('readme')
     return

@@ -1,4 +1,4 @@
-
+const { marked } = require('./marked.js')
 module.exports = function () {
   let menu = document.getElementById('menu')
   let download = document.getElementById('download')
@@ -69,6 +69,7 @@ function addList () {
       _item[document.getElementById('list').getAttribute('list')].classList.remove('itemA')
       _item[i].classList.add('itemA')
       document.getElementById('list').setAttribute('list', i)
+      document.getElementById('article').innerHTML = marked(mark.innerText)
     })
   }
   _add.addEventListener('click', function (e) {
@@ -85,9 +86,10 @@ function addList () {
       }
       marks.push(name)
       localStorage.setItem('list', JSON.stringify(marks))
-      localStorage.setItem(name, '<div></div>')
+      localStorage.setItem(name, '<div><br></div>')
       mark.setAttribute('name', name)
-      mark.innerHTML = ''
+      mark.innerHTML = '<div><br></div>'
+      document.getElementById('article').innerHTML = ''
     } else {
       alert('输入不能为空')
     }
