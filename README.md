@@ -23,4 +23,4 @@ npm run build
 pm2 start ./server/server.js
 ```
 
-浏览器打开 localhost:8008 即可使用
+浏览器打开 localhost:8001 即可使用
