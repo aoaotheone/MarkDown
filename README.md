@@ -24,3 +24,6 @@ pm2 start ./server/server.js
 ```
 
 浏览器打开 localhost:8001 即可使用
+
+## 预览
+点击[这里](http://aoaotheone.cn:8001)访问
